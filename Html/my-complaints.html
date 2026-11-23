@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Complaints</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <div class="menu">
+            <h2>CampusFix</h2>
+
+            <a href="student-dashboard.html">Dashboard</a>
+            <a href="submit-complaint.html">Submit Complaint</a>
+            <a href="my-complaints.html">My Complaints</a>
+
+            <button id="logoutButton">Logout</button>
+        </div>
+
+        <div class="content">
+            <h1>My Complaints</h1>
+
+            <div class="filters">
+                <input type="text" id="searchBox" placeholder="Search by title">
+
+                <select id="categoryFilter">
+                    <option value="">All Categories</option>
+                    <option>Electricity</option>
+                    <option>Wi-Fi and Internet</option>
+                    <option>Classroom Maintenance</option>
+                    <option>Water Supply</option>
+                    <option>Cleanliness</option>
+                    <option>Furniture</option>
+                    <option>Other</option>
+                </select>
+
+                <select id="statusFilter">
+                    <option value="">All Status</option>
+                    <option>Pending</option>
+                    <option>In Progress</option>
+                    <option>Resolved</option>
+                    <option>Rejected</option>
+                </select>
+            </div>
+
+            <div id="complaintList"></div>
+        </div>
+
+    </div>
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/complaints.js"></script>
+</body>
+</html>

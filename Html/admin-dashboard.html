@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+<body>
+
+    <div class="dashboard">
+
+        <div class="menu">
+            <h2>CampusFix Admin</h2>
+
+            <a href="admin-dashboard.html">All Complaints</a>
+
+            <button id="logoutButton">Logout</button>
+        </div>
+
+        <div class="content">
+            <h1>Admin Dashboard</h1>
+            <p id="adminWelcome"></p>
+
+            <div class="filters">
+                <input type="text" id="adminSearch" placeholder="Search by title">
+
+                <select id="adminStatusFilter">
+                    <option value="">All Status</option>
+                    <option>Pending</option>
+                    <option>In Progress</option>
+                    <option>Resolved</option>
+                    <option>Rejected</option>
+                </select>
+            </div>
+
+            <div id="adminComplaintList"></div>
+        </div>
+
+    </div>
+
+    <script src="../js/storage.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login | CampusFix</title>
+    <link rel="stylesheet" href="../css/auth.css">
+</head>
+<body>
+
+    <header>
+        <a href="index.html">CampusFix</a>
+        <a href="register.html">Register</a>
+    </header>
+
+    <div class="form-box">
+        <h1>Login</h1>
+        <p>Login to view your complaints.</p>
+
+        <form id="loginForm">
+            <label>Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Enter your password" required>
+
+            <button type="submit">Login</button>
+        </form>
+
+        <div class="admin-box">
+            <h3>Admin Demo Login</h3>
+            <p>Email: admin@campusfix.com</p>
+            <p>Password: admin123</p>
+        </div>
+
+        <p class="link-text">
+            New student?
+            <a href="register.html">Create an account</a>
+        </p>
+    </div>
+    <script src="../js/storage.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
