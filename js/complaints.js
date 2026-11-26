@@ -47,43 +47,6 @@ if (complaintForm) {
         window.location.href = "my-complaints.html";
     });
 }
-var user = localStorage.getItem("campusfixCurrentUser");
-
-/* If no student is logged in, open the login page */
-if (!user) {
-    window.location.href = "login.html";
-}
-
-var complaintForm = document.getElementById("complaintForm");
-
-complaintForm.addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    user = JSON.parse(user);
-
-    var complaints = getData("campusfixComplaints");
-
-    var complaint = {
-        id: "CF-" + Date.now(),
-        email: user.email,
-        title: document.getElementById("title").value,
-        category: document.getElementById("category").value,
-        location: document.getElementById("location").value,
-        priority: document.getElementById("priority").value,
-        description: document.getElementById("description").value,
-        status: "Pending",
-        date: new Date().toLocaleDateString()
-    };
-
-    complaints.push(complaint);
-
-    saveData("campusfixComplaints", complaints);
-
-    alert("Complaint submitted successfully.");
-
-    window.location.href = "my-complaints.html";
-});
-
 /* Logout button */
 document.getElementById("logoutButton").addEventListener("click", function () {
     localStorage.removeItem("campusfixCurrentUser");
